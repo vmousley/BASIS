@@ -17,7 +17,7 @@ require("ggpubr")
 require("naniar")
 
 # Pre-processing ----------------------------------------------------------
-df <- read_xlsx('/Volumes/leap/MATLAB data/lm_preproc/lm_analysis/popout/popout_wide_20191118T143330.xlsx') # read in tall excel file from lm_analysis folder 
+df <- read_xlsx('/Volumes/leap/MATLAB data/lm_preproc/lm_analysis/popout/popout_wide_20200124T212021.xlsx') # read in tall excel file from lm_analysis folder 
 df[df == 65535] <- NA # replace all 65535s with NA - 65535 is the automatic number used for missing data with lm scripts
 df[df == 'A012'] <- 'P012' # fix ID numbers
 df[df == 'P11'] <- 'P011'
@@ -42,7 +42,7 @@ mylist <- vector() # make empty vector called mylist
 for (row in 1:nrow(a)) { # for a range of numbers between 1 and # of rows in a, iterate through each number
   id <- toString(a[row, "Var1"]) # look @ Var1 values for each row in object a and assign them to object id as a string 
   freq  <- a[row, "Freq"] # look @ freq values for each row in object a and assign them to object freq 
-  if(freq < 5) { # if the freq < 5
+  if(freq <= 5) { # if the freq < 5
     mylist <- c(mylist, id) # then put ID number in mylist
     print(paste(id, "is less than 5")) # then tell us which ID < 5
   } else { # if freq > 5
@@ -148,8 +148,12 @@ names(lat5)[names(lat5)=="s.platlist"] <- "phone" # change annoying name to nice
 names(lat5)[names(lat5)=="s.nlatlist"] <- "noise" # change annoying name to nice one
 names(lat5)[names(lat5)=="s.blatlist"] <- "bird" # change annoying name to nice one
 
-lat5 <- arrange(melt(lat5,id=c('id', 'group', 'age')), by.x=id) # format data for aov
+lat5 <- arrange(melt(meta, id=c('id', 'group', 'age')), by.x=id) # format data for aov
+lat5$lat <- meta$
 names(lat5)[names(lat5)=="value"] <- "lat" # change annoying name to nice one
+
+# get rid of the behavedata things that aren't real 
+lat5 <- lat5[-c(51:115),]
 
 lat5aov <- aov(lat ~ variable, data = lat5) # aov with 5 variable levels
 summary(lataov) # if significant, do planned post-hoc comparisons (t-tests)
