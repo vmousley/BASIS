@@ -1,6 +1,5 @@
-### Analysis code for face pop-out
-# Last updated 26 March 2019
-# "Bilingual and Monolingual Infants’ Attention Capture and Maintenance For Faces"
+### Analysis code for face pop-out task
+# Last updated 22 April 2020
 
 # Dependencies ------------------------------------------------------------
 # load all packages you need 

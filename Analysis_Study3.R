@@ -1,6 +1,5 @@
 ### Analysis code for 50 faces
-# Last updated 2 April 2020
-# "Face scanning amongst mono & bilinguals"
+# Last updated 22 April
 
 require("praise")
 require("ggplot2")
@@ -930,7 +929,7 @@ plot1 <- em_e2fplot
 plot2 <- vm_e2fplot
 plot_grid(plot1, plot2, labels = "AUTO")
 
-### FOI ----------------
+### FOI (NOTE: Evelyne, ignore this stuff, it's super confusing) ----------------
 df1 <- read.csv('/Users/victoriamousley/Documents/MATLAB/lm_preproc/lm_analysis/50faces/vid1_1.txt', header = FALSE)
 df2 <- read.csv('/Users/victoriamousley/Documents/MATLAB/lm_preproc/lm_analysis/50faces/vid1_2.txt', header = FALSE)
 df3 <- read.csv('/Users/victoriamousley/Documents/MATLAB/lm_preproc/lm_analysis/50faces/vid1_3.txt', header = FALSE)
