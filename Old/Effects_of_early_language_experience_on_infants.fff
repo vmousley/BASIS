@@ -1,0 +1,45 @@
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+
+
+{\centering \includegraphics[width=3.33in]{/Users/victoriamousley/Desktop/MATLAB/lm_analysis/popout/stimuli/POPOUT1}
+
+}
+
+\caption{Example of a stimulus silde with five object categories.}\label{fig:taskstim}
+\end{figure*}
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+
+\includegraphics{Effects_of_early_language_experience_on_infants_files/figure-latex/latencyplot-1} \caption{Fixation latency to face vs non-face AOIs by group.}\label{fig:latencyplot}
+\end{figure*}
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+
+\includegraphics{Effects_of_early_language_experience_on_infants_files/figure-latex/lat5plot-1} \caption{Fixation latency to each AOI across all participants.}\label{fig:lat5plot}
+\end{figure*}
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+
+\includegraphics{Effects_of_early_language_experience_on_infants_files/figure-latex/count2plot-1} \caption{Fixation count to face vs non-face stimuli by group.}\label{fig:count2plot}
+\end{figure*}
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+
+\includegraphics{Effects_of_early_language_experience_on_infants_files/figure-latex/allcountplot-1} \caption{Fixation count to all AOIs across all participants.}\label{fig:allcountplot}
+\end{figure*}
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+
+\includegraphics{Effects_of_early_language_experience_on_infants_files/figure-latex/durface-1} \caption{Fixation duration to face vs non-face AOIs by group.}\label{fig:durface}
+\end{figure*}
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+
+\includegraphics{Effects_of_early_language_experience_on_infants_files/figure-latex/alldurplot-1} \caption{Fixation duration to AOIs across all participants.}\label{fig:alldurplot}
+\end{figure*}
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+
+\includegraphics{Effects_of_early_language_experience_on_infants_files/figure-latex/FOM-1} \caption{Face orientation index by group.}\label{fig:FOM}
+\end{figure*}

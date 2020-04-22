@@ -1,0 +1,181 @@
+---
+title             : "Bilingual and Monolingual Infants' Face Scanning Patterns"
+shorttitle        : "Infants' face scanning patterns"
+
+author: 
+  - name          : "Victoria L Mousley"
+    affiliation   : "1, 2, 3"
+    corresponding : yes    # Define only one corresponding author
+    address       : "Alexandra House, 17 - 19 Queen Square, WC1N 3AZ"
+    email         : "v.mousley.17@ucl.ac.uk"
+  - name          : "Luke Mason"
+    affiliation   : "3"
+  - name          : "Tim Smith"
+    affiliation   : "3"
+  - name          : "Mairéad MacSweeney"
+    affiliation   : "1, 2"
+  - name          : "Evelyne Mercure"
+    affiliation   : "1, 2, 3, 4"
+
+affiliation:
+  - id            : "1"
+    institution   : "UCL Institute of Cognitive Neuroscience"
+  - id            : "2"
+    institution   : "UCL Deafness, Cognition and Language Research Centre"
+  - id            : "3"
+    institution   : "Birkbeck, University of London"
+  - id            : "4"
+    institution   : "Goldsmith's, University of London"
+
+authornote: |
+
+abstract: |
+  One or two sentences providing a **basic introduction** to the field,  comprehensible to a scientist in any discipline. Two to three sentences of **more detailed background**, comprehensible  to scientists in related disciplines. One sentence clearly stating the **general problem** being addressed by  this particular study. One sentence summarizing the main result (with the words "**here we show**" or their equivalent). Two or three sentences explaining what the **main result** reveals in direct comparison to what was thought to be the case previously, or how the  main result adds to previous knowledge. One or two sentences to put the results into a more **general context**. Two or three sentences to provide a **broader perspective**, readily comprehensible to a scientist in any discipline.
+
+keywords          : "keywords"
+wordcount         : "X"
+
+bibliography      : ["r-references.bib"]
+
+floatsintext      : yes
+figurelist        : yes
+tablelist         : yes
+footnotelist      : no
+linenumbers       : yes
+mask              : no
+draft             : no 
+number section    : true
+fig.width         : 4
+fig.height        : 3
+fig.caption       : yes
+header-includes   :
+  \usepackage{booktabs}
+  \usepackage{longtable}
+  \usepackage{array}
+  \usepackage{multirow}
+  \usepackage[table]{xcolor}
+  \usepackage{wrapfig}
+  \usepackage{float}
+  \floatplacement{figure}{H}
+documentclass     : "apa6"
+classoption       : "man"
+output            : papaja::apa6_pdf
+---
+
+```{r setu1p, include = FALSE}
+library("papaja")
+source('/Users/victoriamousley/BASIS/Analysis_Study3.R')
+require('dplyr')
+require('broom')
+require('purrr')
+require('kableExtra')
+```
+
+# Introduction
+# Methods
+
+## Participants
+  A total of `r mono_total` monolingual (`r female_mono` girls, mean age = `r mono_mean_days` days, `r mono_mean_months` months) and `r bi_total` bilingual infants (`r female_bi` girls, mean age = `r bi_mean_days` days, `r bi_mean_months` months) between 15 and 18 months old contributed data. Monolingual infants were exposed to English (> 95% exposure) and bilingual infants were exposed to English and one non-English language (> 20% exposure). The combination of languages varied between infants. Exposure to each language was estimated with an English adaptation (Byers-Heinlein, 2009) of the language exposure questionnaire designed by Bosch and Sebastian-Gallés (1997). Age ***DOES***(?) differ between group (`r apa_age_m1$full_result$group`). A further **Xx** participated in the study but were excluded due to equipment error (n = **Xx**) and fussiness (n = **Xx**). 
+  Infants were contacted from the Birkbeck Babylab database of primarily London-based volunteers recruited from advertisements and mum-and-baby groups, parenting websites, and publications. Most infants were born at term (37 - 42 weeks gestation), except for **Xx** infants born slightly before term (**XX** - **XX** weeks). Parents reported no hearing problems or vision problems, and no serious mental or physical conditions. Travel expenses were reimbursed, and a young scientist t-shirt and certificate of participation were offered to families.
+  This study was carried out in accordance with the UCL and Birkbeck Research Ethics Committees and conforms with the General Data Protection Regulation (2018). All parents gave written informed consent prior to participation. 
+
+## Procedure
+
+## Stimuli
+
+## Analysis Pipeline
+  We used `r cite_r("r-references.bib")` for all our analyses. Simulated data, pre-processing scripts, and the pre-registered analysis script can be found on the GitHub repository (Mousley, 2019).
+
+### Data pre-processing
+
+# Results
+
+## Evelyne's Results: 7- to 10-month-olds
+### Proportion of looking to the mouth
+  A t-test revealed no significant difference between monolingual and bilingual infants' proportion of looking to the mouth. See Figure \@ref(fig:mouthpropplot).
+  
+```{r mouthpropplot, fig.cap = "Mouth-to-Face Ratio with Age."}
+plot(mouthpropplot)
+```
+
+### Total looking time to mouth
+  A t-test revealed no significant difference between monolingual and bilingual infants' total looking time to the mouth. See Figure \@ref(fig:em_mouthLTplot).
+  
+```{r em_mouthLTplot, fig.cap = "Total Looking to Mouth with Age."}
+plot(em_mouthLTplot)
+```
+
+### Total looking time to face
+  A t-test revealed no significant difference between monolingual and bilingual infants' total looking time to the face. See Figure \@ref(fig:em_faceLTAvplot).
+  
+```{r em_faceLTAvplot, fig.cap = "Total Looking to Face with Age."}
+plot(em_faceLTAvplot)
+```
+
+### Eyes-to-face ratio
+  A t-test revealed no significant difference between monolingual and bilingual infants' eyes-to-face ratio. See Figure \@ref(fig:em_e2fplot).
+  
+```{r em_e2fplot, fig.cap = "Eyes-to-Face Ratio by Group with Age."}
+plot(em_e2fplot)
+```
+
+### Mouth-to-face ratio
+  A t-test revealed no significant difference between monolingual and bilingual infants' mouth-to-face ratio. See Figure \@ref(fig:em_m2fplot)).
+```{r em_m2fplot, fig.cap = "Mouth-to-Face Ratio by Group with Age."}
+plot(em_m2fplot)
+```
+
+\newpage
+
+## Victoria's Results (so far): 15- to 18-month-olds
+### Proportion of looking to the mouth
+  A t-test revealed no significant difference between monolingual and bilingual infants' proportion of looking time to the mouth. A generalised linear model revealed a trend towards an effect of group [`r m1_vmmouthPropAvList$statistic$GroupM`] and a trend towards an interaction of Age x Group [`r m1_vmmouthPropAvList$statistic$Age_GroupM`]. See Figure \@ref(fig:vm_mouthpropplot).
+  
+```{r vm_mouthpropplot, fig.cap = "Proportion of Looking Time to the Mouth with Age."}
+plot(vm_mouthpropplot)
+```
+
+### Total looking time to mouth AOI
+  A t-test revealed no significant difference between monolingual and bilingual infants' total looking time to the mouth. A generalised linear model revealed a trend towards an effect of group [`r m1_vmmouthLT$statistic$GroupM`] and a trend towards an interaction of Age x Group [`r m1_vmmouthLT$statistic$Age_GroupM`]. See Figure \@ref(fig:vm_mouthLT).
+  
+```{r vm_mouthLT, fig.cap = "Total Looking Time to Mouth AOI with Age."}
+plot(vm_mouthLT)
+```
+
+### Total looking time to face
+  A t-test revealed no significant difference between monolingual and bilingual infants' total looking time to the face. See Figure \@ref(fig:vm_faceLTAvListplot).
+  
+```{r vm_faceLTAvListplot, fig.cap = "Total Looking Time to Face AOI with Age."}
+plot(vm_faceLTAvListplot)
+```
+
+### Eyes-to-face ratio
+  A t-test revealed no significant difference between monolingual and bilingual infants' eyes-to-face ratio. A generalised linear model revealed a trend toward a an effect of group [`r m1_vme2fList$statistic$Group`] and a trend toward an Age x Group interaction [`r m1_vme2fList$statistic$Age_GroupM`].  See Figure \@red(fig:vm_e2fplot).
+  
+```{r vm_e2fplot, fig.cap = "Eyes-to-Face Ratio with Age."}
+plot(vm_e2fplot)
+```
+
+### Mouth-to-face ratio
+  A t-test revealed no significant difference between monolingual and bilingual infants' mouth-to-face ratio. See Figure \@ref(fig:vm_m2fplot).
+  
+```{r vm_m2fplot, fig.cap = "Mouth-to-Face Ratio with Age."}
+plot(vm_m2fplot)
+```
+
+# Discussion
+
+
+\newpage
+
+# References
+```{r create_r-references, echo=FALSE}
+r_refs(file = "r-references.bib")
+```
+
+\begingroup
+\setlength{\parindent}{-0.0in}
+\setlength{\leftskip}{0.0in}
+
+<div id = "refs"></div>
+\endgroup

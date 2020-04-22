@@ -1,0 +1,75 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Cmd+Shift+Enter*. 
+
+```{r}
+plot(cars)
+```
+
+
+
+
+Fixation count to all AOIs (ANOVA):
+```{r, echo=FALSE}
+count5aov <- apa_print(count5aov)
+count5aov_table <- apa_table(
+  count5aov$table
+  , caption = 'Test.'
+  , note = 'Test.'
+)
+```
+
+Fixation count to all AOIs (descriptives):
+```{r, echo=FALSE}
+print(count5table)
+```
+
+Fixation count to face vs non-face AOIs:
+```{r, echo=FALSE}
+plot(fix2plot)
+```
+
+Fixation count to face vs. non-face AOIs (ANOVA):
+```{r, echo=FALSE}
+count2aov <- apa_print(count2aov)
+count2aov_table <- apa_table(
+  count2aov$table
+  , caption = 'Test.'
+  , note = 'Test.'
+)
+```
+
+Fixation count to face vs. non-face AOIs (descriptives):
+```{r, echo=FALSE}
+print(count2table)
+```
+
+Fixation count to all AOIs by group (ANOVA):
+```{r, echo=FALSE}
+count5aov2 <- apa_print(count5aov2)
+count5aov2_table <- apa_table(
+  count5aov2$table
+  , caption = 'Test.'
+  , note = 'Test.'
+)
+```
+
+Fixation count to face vs non-face AOIs by group:
+```{r, echo=FALSE}
+plot(fixgroupbox)
+```
+
+
+
+
+Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Cmd+Option+I*.
+
+When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Cmd+Shift+K* to preview the HTML file). 
+
+The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.
+
